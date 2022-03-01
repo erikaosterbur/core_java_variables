@@ -10,6 +10,7 @@ public class Main {
         DivideTwoDoubles();
         DivideAndCast();
         Constant();
+        Cafe();
     }
 
     public static void SumTwoInts () {
@@ -81,27 +82,39 @@ public class Main {
         int q = y / x;
         System.out.println(q);
         // Now, cast y to a double and assign to q.
-        // Print q again.
-        double y2 = (double)y;
-        double q2 = y2 / x;
-        System.out.println(q2);
+        double qq = (double)y/x;
+        System.out.println(qq);
     }
 
     public static void Constant () {
         // Write a program that declares a named constant and uses it in a calculation.
         // Print the result.
-
+        final int a = 20;
+        int b = 30;
+        int sum = a + b;
+        System.out.println(sum);
     }
 
     public static void Cafe () {
         // Write a program where you create 3 variables that represent products at a cafe.
         // The products could be beverages like coffee, cappuccino, espresso, green tea, etc.
         // Assign prices to each product.
-        // Create 2 more variables called subtotal and totalSale and complete an “order” for 3 items of the first product, 4 items of the second product, and 2 items of the third product.
+        double coffee = 2.50;
+        double cappuccino = 3.50;
+        double espresso = 2.75;
+        // Create 2 more variables called subtotal and totalSale
+        double subtotal;
+        double totalSale;
+        //Complete an “order” for
+        // 3 items of the first product,
+        // 4 items of the second product,
+        // and 2 items of the third product.
         // Add them all together to calculate the subtotal.
+        subtotal = (coffee * 3) + (cappuccino * 4) + (espresso * 2);
         // Create a constant called SALES_TAX and add sales tax to the subtotal to obtain the totalSale amount.
+        final double SALES_TAX = .06875*subtotal;
+        totalSale = subtotal + SALES_TAX;
         // Be sure to format the results to 2 decimal places.
+        System.out.printf("%.2f", totalSale);
     }
-
-
 }
